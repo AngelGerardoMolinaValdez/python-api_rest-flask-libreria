@@ -14,7 +14,7 @@ API de gestión de inventario desarrollada con Flask. Permite realizar operacion
 
 2. Instalar las dependencias:
    ```
-   pip install Flask Flask-HTTPAuth
+   pip install Flask Flask-HTTPAuth assertpy
    ```
 2. Ejecutar la aplicación:
    ```
