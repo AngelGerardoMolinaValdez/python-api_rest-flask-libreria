@@ -38,13 +38,13 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Lista todos los productos. 📋
 
 ```http
-  GET /productos
+  GET /products
 ```
 
 #### Agrega un nuevo producto. 🆕
 
 ```http
-  POST /api/items
+  POST /products
 ```
 
 ##### Query Parameters
@@ -58,7 +58,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Obtiene los detalles de un producto específico. 🔍
 
 ```http
-  GET /productos/{id}
+  GET /products/{id}
 ```
 
 ##### Path Parameters
@@ -70,7 +70,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Actualiza la información de un producto. 📝
 
 ```http
-  PUT /productos/{id}
+  PUT /products/{id}
 ```
 
 ##### Path Parameters
@@ -90,7 +90,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Elimina un producto del inventario. ❌
 
 ```http
-  DELETE /productos/{id}
+  DELETE /products/{id}
 ```
 
 ##### Path Parameters
@@ -104,13 +104,13 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Lista todas las categorías. 📋
 
 ```http
-  GET /categorias
+  GET /categories
 ```
 
 #### Crea una nueva categoría. 🆕
 
 ```http
-  POST /categorias
+  POST /categories
 ```
 
 ##### Query Parameters
@@ -122,7 +122,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Muestra los productos en una categoría específica. 🔍
 
 ```http
-  GET /categorias/{id}
+  GET /categories/{id}
 ```
 
 ##### Path Parameters
@@ -134,7 +134,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Actualiza una categoría. 📝
 
 ```http
-  PUT /categorias/{id}
+  PUT /categories/{id}
 ```
 
 ##### Path Parameters
@@ -152,7 +152,7 @@ Es posible agregar nuevas credenciales en el archivo:
 #### Elimina una categoría. ❌
 
 ```http
-  DELETE /categorias/{id}
+  DELETE /categories/{id}
 ```
 
 ##### Path Parameters
