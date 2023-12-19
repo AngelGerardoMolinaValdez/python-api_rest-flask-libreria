@@ -41,6 +41,13 @@ Es posible agregar nuevas credenciales en el archivo:
   GET /products
 ```
 
+##### Path Parameters
+
+| Parameter      | Type     | Description                                  |
+| :------------- | :------- | :------------------------------------------- |
+| `name`         | `string` | **Optional**. El nombre del producto         |
+| `category`     | `string` | **Optional**. La categoría del producto      |
+
 #### Agrega un nuevo producto. 🆕
 
 ```http

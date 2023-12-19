@@ -6,7 +6,16 @@ from auth import auth
 @auth.login_required
 def handle_products():
     if request.method == 'GET':
-        return jsonify(products)
+        name = request.args.get('name')
+        category = request.args.get('category')
+
+        if name or category:
+            filtered_products = [product for product in products if
+                                (name is None or name.lower() in product['name'].lower()) and
+                                (category is None or category.lower() in product['category'].lower())]
+            return jsonify(filtered_products)
+        else:
+            return jsonify(products)
     elif request.method == 'POST':
         nuevo_producto = request.json
         nuevo_producto["id"] = uuid.uuid4()
