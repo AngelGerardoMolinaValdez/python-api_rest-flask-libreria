@@ -24,3 +24,15 @@ def initialize_routes(app: Flask):
         view_func=handle_category,
         methods=['GET', 'PUT', 'DELETE']
     )
+
+    app.add_url_rule(
+        '/users',
+        view_func=handle_users,
+        methods=['GET', 'POST']
+    )
+
+    app.add_url_rule(
+        '/users/<string:id>',
+        view_func=handle_user,
+        methods=['GET', 'PUT', 'DELETE']
+    )

@@ -1,6 +1,6 @@
 import uuid
 from flask import jsonify, request
-from models import products, categories
+from models import products, categories, users
 from auth import auth
 
 @auth.login_required
@@ -64,3 +64,39 @@ def handle_category(id):
     elif request.method == 'DELETE':
         categories.remove(categoria)
         return jsonify({'mensaje': 'Categoría eliminada'}), 200
+
+@auth.login_required
+def handle_users():
+    if request.method == 'GET':
+        return jsonify(users)
+    elif request.method == 'POST':
+        new_user = request.json
+        new_user["id"] = uuid.uuid4()
+        categories.append(new_user)
+        users.append(new_user)
+        return jsonify(new_user), 201
+
+@auth.login_required
+def handle_user(id: str):
+    user_data = next((u for u in users if u['id'] == id), None)
+    if not user_data:
+        return jsonify({'mensaje': 'Usuario no encontrado'}), 404
+
+    if request.method == 'GET':
+        name = request.args.get('role')
+
+        if name:
+            users = [
+                user for user in users if
+                (name is None or name.lower() in users['role'].lower())
+            ]
+            return jsonify(users)
+        else:
+            return jsonify(users)
+    elif request.method == 'PUT':
+        user_data = request.json
+        users.update(user_data)
+        return jsonify(user_data), 201
+    elif request.method == 'DELETE':
+        categories.remove(user_data)
+        return jsonify({'mensaje': 'Usuario eliminada'}), 200

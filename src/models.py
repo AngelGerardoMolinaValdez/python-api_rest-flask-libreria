@@ -22,3 +22,38 @@ categories = [
         "name": "clothes"
     }
 ]
+
+roles = [
+    {
+        "id": 1,
+        "name": "admin"},
+    {
+        "id": 2,
+        "name": "sales"
+    },
+    {
+        "id": 3,
+        "name": "support"
+    }
+]
+
+users = [
+    {
+        "id": "8a3bb2af-bd56-4e67-83e0-1fd77a0dcdc4",
+        "username": "admin",
+        "password": "1234",
+        "role": "admin",
+        "name": "Fulanito Perez",
+        "address": "Calle 3 Mexico",
+        "email": "mock_user@fakeemail.com"
+    },
+    {
+        "id": "fbf87bab-0129-4a77-b4a8-09b6d29c1106",
+        "username": "support",
+        "password": "1234",
+        "role": "support",
+        "name": "Otro Fulanito Perez",
+        "address": "Calle 4 Mexico",
+        "email": "mock_user@fakeemail.com"
+    }
+]

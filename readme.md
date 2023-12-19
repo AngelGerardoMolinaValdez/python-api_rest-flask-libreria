@@ -167,3 +167,81 @@ Es posible agregar nuevas credenciales en el archivo:
 | Parameter    | Type      | Description                          |
 | :----------- | :-------  | :----------------------------------- |
 | `id`         | `string`  | **Required**. el id de la categoría  |
+
+### Usuarios
+
+#### Lista todos los usuarios. 📋
+
+```http
+  GET /users
+```
+
+##### Path Parameters
+
+| Parameter      | Type     | Description                                  |
+| :------------- | :------- | :------------------------------------------- |
+| `role`         | `string` | **Optional**. El rol del usuario             |
+
+#### Crear un nuevo usuario. 🆕
+
+```http
+  POST /users
+```
+
+##### Query Parameters
+
+| Parameter      | Type     | Description                                  |
+| :------------- | :------- | :------------------------------------------- |
+| `username`         | `string` | **Required**. El nombre de usuario        |
+| `password`     | `string` | **Required**. La contraseña      |
+| `role`        | `integer` | **Required**. El rol del usuario      |
+| `name`        | `integer` | **Required**. El nombre del usuario      |
+| `address`        | `integer` | **Required**. La dirección del usuario      |
+| `email`        | `integer` | **Required**. El correo del usuario      |
+
+#### Obtiene los detalles de un producto específico. 🔍
+
+```http
+  GET /users/{id}
+```
+
+##### Path Parameters
+
+| Parameter    | Type      | Description                          |
+| :----------- | :-------  | :----------------------------------- |
+| `id`         | `string`  | **Required**. el id del usuario     |
+
+#### Actualiza la información de un usuario. 📝
+
+```http
+  PUT /users/{id}
+```
+
+##### Path Parameters
+
+| Parameter    | Type      | Description                          |
+| :----------- | :-------  | :----------------------------------- |
+| `id`         | `string`  | **Required**. el id del usuario     |
+
+##### Query Parameters
+
+| Parameter      | Type     | Description                                  |
+| :------------- | :------- | :------------------------------------------- |
+| `username`         | `string` | **Required**. El nombre de usuario        |
+| `password`     | `string` | **Required**. La contraseña      |
+| `role`        | `integer` | **Required**. El rol del usuario      |
+| `name`        | `integer` | **Required**. El nombre del usuario      |
+| `address`        | `integer` | **Required**. La dirección del usuario      |
+| `email`        | `integer` | **Required**. El correo del usuario      |
+
+#### Eliminar un usuario. ❌
+
+```http
+  DELETE /usuario/{id}
+```
+
+##### Path Parameters
+
+| Parameter    | Type      | Description                          |
+| :----------- | :-------  | :----------------------------------- |
+| `id`         | `string`  | **Required**. el id del usuario     |
