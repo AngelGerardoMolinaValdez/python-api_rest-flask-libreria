@@ -7,19 +7,34 @@ API de gestión de inventario desarrollada con Flask. Permite realizar operacion
 ### Pre-requisitos 📋
 
 - [Python 3.11](https://www.python.org/downloads/)
-- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
-- [Flask-HTTPAuth](https://flask-httpauth.readthedocs.io/en/latest/)
 
 ### Instalación 🔧
 
-2. Instalar las dependencias:
-   ```
-   pip install Flask Flask-HTTPAuth assertpy
-   ```
-2. Ejecutar la aplicación:
-   ```
-   python `./src/app.py`
-   ```
+Primero debemos instalar [poetry](https://python-poetry.org/) para la gestión de dependencias:
+
+```
+pip install poetry==1.7.1
+```
+
+Hecho esto, instalemos las dependencias del proyecto con:
+
+```
+poetry install
+```
+
+### Ejecución ⚙
+
+Ejecutar la aplicación:
+
+```
+poetry run python `./src/app.py`
+```
+
+O también usando el comando:
+
+```
+poetry run `./src/app.py`
+```
 
 ## Autenticación 🔐
 
