@@ -1,0 +1,24 @@
+meta {
+  name: crear producto
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/products
+  body: json
+  auth: none
+}
+
+body:json {
+    {
+      "category": "clothes",
+      "name": "Producto de prueba 2",
+      "stock": 10
+    }
+}
+
+script:post-response {
+  let data = res.body;
+  bru.setEnvVar("ID_NEW_PRODUCT", data.id);
+}

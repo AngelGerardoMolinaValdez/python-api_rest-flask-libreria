@@ -1,0 +1,17 @@
+meta {
+  name: modificar producto
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{URL}}/products/{{ID_NEW_PRODUCT}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "nuevo nombre de prueba"
+  }
+}

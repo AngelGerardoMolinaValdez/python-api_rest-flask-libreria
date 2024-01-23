@@ -1,0 +1,14 @@
+auth {
+  mode: basic
+}
+
+auth:basic {
+  username: admin
+  password: 1234
+}
+
+tests {
+  test("La respuesta debe ser 200 o 201", () => {
+    expect(res.status).to.be.oneOf([200, 201]);
+  });
+}
