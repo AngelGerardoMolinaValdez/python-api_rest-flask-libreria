@@ -18,7 +18,7 @@ def handle_products():
             return jsonify(products)
     elif request.method == 'POST':
         nuevo_producto = request.json
-        nuevo_producto["id"] = uuid.uuid4()
+        nuevo_producto["id"] = str(uuid.uuid4())
         products.append(nuevo_producto)
         return jsonify(nuevo_producto), 201
 
